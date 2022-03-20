@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../../../../../:\ruiso\ESTUDIOS\Ingenieria de Sistemas\MATERIAS\SEMESTRE I\Construccion de Software\Universos Comics\Django\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

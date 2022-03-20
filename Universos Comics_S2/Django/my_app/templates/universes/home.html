@@ -1,0 +1,163 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="{% static 'css/styleHome.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'imagenes/logo.jpg' %}" />
+    <!--<script src = "js/contraseña.js" charset="utf-8"></script>-->
+</head>
+
+<body>
+
+    <header>
+        <section class="textos-header">
+            <img src="{% static 'imagenes/logo.png' %}">
+            <h1>WORLD COMICS</h1>
+            <h2>-Web page of Comics and Manga-</h2>
+        </section>
+
+        <div style="height: 150px; overflow: hidden;" >
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M-1.97,151.47 C73.08,153.45 279.06,149.50 499.72,148.52 L499.15,150.48 L0.85,159.38 Z" style="stroke: none; fill: #08f;">
+                </path>
+            </svg>
+        </div>
+
+        <nav >
+            <a href="{% url 'home' %}" method="post">| Home |</a>
+            <a href="{% url 'characters' %}" method="post">| Characters |</a>
+            <a href="{% url 'list_universe' %}" method="post">| Universe |</a>
+            <a href="{% url 'form_character' %}" method="post">| Create |</a>
+        </nav>
+    </header>
+
+    <main>
+        <form align="center" >
+            <section class="Texto">
+                <div class="contenedor">
+                    <h1 class="titulo">
+                        WORLD COMICS                     
+                    </h1>
+                    <h2 class="sub_titulo">
+                        -Web page of Comics and Manga-
+                    </h2>
+                </div>
+                <div class="contenedor">
+                    <div class="tarjeta">
+                        <img class="img_character" src="{% static 'imagenes/vertical.jpg' %}" alt="">
+                        <p class="card_p">
+                            El término cómic es utilizado para designar a aquellas formas de relato gráfico que se arman en base a dibujos encuadrados en viñetas.
+                            El cómic también puede ser conocido como historieta o tebeo dependiendo del lugar o región en la que se haga referencia a él. El cómic
+                            es una forma de arte que se ha popularizado especialmente en el siglo XX aunque podemos encontrar varios antecedentes de esta forma de 
+                            relato en otros tiempos de la historia.
+                            <br>
+                            El comic puede ser definido como un relato que se arma principalmente en base a dibujos o imágenes. El mismo puede contar o no con texto
+                            pero aunque lo haga, el texto nunca ocupa un rol principal frente a los dibujos como sí lo hace en otras formas de relato tales como la 
+                            novela o la poesía. El segundo plano que tiene el texto en esta forma gráfica se complementa con otros elementos tales como símbolos, 
+                            onomatopeyas, formas expresivas, etc. El cómic se diagrama normalmente en viñetas (que pueden estar marcadas o no) dentro de las cuales 
+                            sucede un acto o diálogo.
+                            <br><br>
+                            Cada viñeta representa un momento específico de la situación contada, como también puede representar diferentes 
+                            situaciones. Por lo general, es por todo esto considerado una forma de arte aunque para muchos lo sea de modo alternativo (es decir, 
+                            no siguiendo los cánones tradicionales).
+                        </p>
+                    </div>
+                    <br><br>
+                    <p class="texto_titulo">
+                        La presencia y popularización del cómic se debió en gran parte a su llegada al público masivo a través de la publicación de revistas, 
+                        periódicos y otros medios accesibles de información. Los artistas de historietas y cómics se volvieron especialmente populares entre los 
+                        niños a pesar de que muchas de las historietas estaban dirigidas a los adultos.
+                        <br>
+                        En los cómics podemos encontrar un sinfín de temáticas y modos de representar cada escena. Sin embargo, son populares las historias de 
+                        superhéroes, de personajes fantásticos y míticos, las situaciones exageradas, absurdas, llenas de expresividad (violencia, temor, amor, pasión).
+                    </p>
+                </div>
+                <div class="contenedor">
+                    <div class="card">
+                        <a href="{% url 'marvel_comics' %}" method="post"><img class="imagenRedonda"   src="{% static 'imagenes/comic1.jpg' %}" alt=""></a>
+                        <p class="titulo2"> Marvel comics <br> 1939 </p>
+                    </div>
+                    <div class="card">
+                        <a href="{% url 'dc_comics' %}" method="post"><img class="imagenRedonda"   src="{% static 'imagenes/comic2.jpg' %}" alt=""></a>
+                        <p class="titulo2">DC <br> comics<br> 1934</p>
+                    </div>
+                    <div class="card">
+                        <a href="{% url 'image_comics' %}" method="post"><img class="imagenRedonda"   src="{% static 'imagenes/comic3.jpg' %}" alt=""></a>
+                        <p class="titulo2">Image Comics <br> 1932</p>
+                    </div>
+                    <div class="card">
+                        <a href="{% url 'shonen_jump' %}" method="post"><img class="imagenRedonda"   src="{% static 'imagenes/comic45.jpg' %}" alt=""></a>
+                        <p class="titulo2">Shonen Jump <br> 1968</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="MarvelApp" >
+                <div class="contenedor">
+                    <h1 class="titulo-marvelapp">PLANETA LIBROS <BR> -Planeta Comic-  </h1>
+                </div>
+                <div class="contenedor">
+                    <iframe width="840" height="472" src="https://www.youtube.com/embed/RJKr7vIziZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="contenedor">
+                    <table class="default" border="0" bgcolor= "#FFFFFF">
+                        <tr>
+                            <td width="400"><a href="https://www.planetadelibros.com/editorial/planeta-comic/54"><img src="{% static 'imagenes/descarga.jfif' %}" class="imagen_planeta"></a></td>        
+                        </tr>         
+                    </table>
+                </div>
+            </section>
+
+            <section class="Panini" >
+                <div class="contenedor">
+                    <h1 class="titulo-panini">PANINI COMICS <BR> -Planeta Comic-  </h1>
+                </div>
+                <div class="contenedor">
+                    <iframe width="840" height="472" src="https://www.youtube.com/embed/bLNTVfEvhZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                </div>
+                <div class="contenedor">
+                    <table class="default_panini" border="0" bgcolor= "#FFFFFF">
+                        <tr>
+                            <td width="400"><a href="https://www.panini.es/"><img src="{% static 'imagenes/paniniName.jpg' %}" class="imagen_panini"></a></td>        
+                        </tr>         
+                    </table>
+                </div>
+            </section>
+
+        </form>
+    </main>
+
+    <footer>
+        <div class="contenido-footer">
+            <div class="contenido-PIE">
+                <h4>TRABAJO</h4>
+                <p>Contruccion de Software</p>
+                <p>Ing. Ivan Fernando Fonseca Barinas</p>
+                <p>E-mail: ivan.fonseca@usantoto.edu.co</p>
+                <p>More in: <a href="https://www.ustatunja.edu.co/comunidad-sistemas#ivan-fernando-fonseca-barinas">click aqui</a> </p>
+            </div>
+            <div class="contenido-PIE">
+                <h4>Workers Email.</h4>
+                <p>Est.Ing. Felipe Narvaez. Email: luis.narvaez@usantoto.edu.co Phone:(+57) 320 408 6190</p>
+    
+            </div>
+            <div class="contenido-PIE">
+                <h4>Edition 2021, Software de Prueba.</h4>
+                <p>Universidad Santo Tómas seccional Tunja</p>
+                <p>Ing.Luis Felipe Narváez Gómez</p>
+                <p>Version: Ejercicios de clase</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; Edition 2021, OnRuiso Arrt Desing Web | Ing.Luis Felipe Narváez Gómez | ruiso.art.science@gmail.com | Phone:(+57)320 408 6190</h2>
+    </footer>
+
+</body>
+
+</html>
