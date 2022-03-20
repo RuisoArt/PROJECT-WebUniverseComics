@@ -1,0 +1,105 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAVE</title>
+
+    <link rel="stylesheet" href="{% static 'css/styleSavedd.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'imagenes/logo.jpg' %}" >
+</head>
+<body>
+
+    <header>
+        <section class="textos-header">
+            <img src="{% static 'imagenes/logo.png' %}">
+            <h1>WORLD COMICS</h1>
+            <h2>-Web page of Comics and Manga-</h2>
+        </section>
+
+        <div style="height: 150px; overflow: hidden;" >
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M-1.97,151.47 C73.08,153.45 279.06,149.50 499.72,148.52 L499.15,150.48 L0.85,159.38 Z" style="stroke: none; fill: #08f;">
+                </path>
+            </svg>
+        </div>
+
+        <nav >
+            <a href="{% url 'home' %}" method="post">| Home |</a>
+            <a href="{% url 'characters' %}" method="post">| Characters |</a>
+            <a href="{% url 'list_universe' %}" method="post">| Universe |</a>
+            <a href="{% url 'form_character' %}" method="post">| Create |</a>
+        </nav>
+    </header>
+
+    <main>
+        
+            <section class="Texto">
+                <div class="contenedor">
+                    <h1 class="titulo">
+                        GENERAL SAVE CHARACTERS                     
+                    </h1>
+                    <h2 class="sub_titulo">
+                        Here you will SAVE in the general list of all the characters in the database
+                    </h2>
+                </div>
+            </section>
+    
+            <section>
+                <div class="contenedor">
+                    <form action="{% url 'save_character' %}" method="post">{% csrf_token %}
+            
+                        <label>Universe</label>
+                        <br>
+                        <input type="text" name="universe_id" class="boton">
+                        <br>
+                        <label>Name</label>
+                        <br>
+                        <input type="text" name="name" class="boton"> 
+                        <br>
+                        <label>Description</label>
+                        <br>
+                        <textarea type="text" name="description" class="boton_description"></textarea>
+                        <br>
+                        <label>Image</label>
+                        <br>
+                        <input type="text" name="imagen" class="boton">
+                        <br>
+                
+                        <input type="submit" value="SAVE" class="botonENVIAR">
+                
+                    </form>
+                </div>
+            </section>
+        
+    </main>
+
+    <footer>
+        <div class="contenido-footer">
+            <div class="contenido-PIE">
+                <h4>TRABAJO</h4>
+                <p>Contruccion de Software</p>
+                <p>Ing. Ivan Fernando Fonseca Barinas</p>
+                <p>E-mail: ivan.fonseca@usantoto.edu.co</p>
+                <p>More in: <a href="https://www.ustatunja.edu.co/comunidad-sistemas#ivan-fernando-fonseca-barinas">click aqui</a> </p>
+            </div>
+            <div class="contenido-PIE">
+                <h4>Workers Email.</h4>
+                <p>Est.Ing. Felipe Narvaez. Email: luis.narvaez@usantoto.edu.co Phone:(+57) 320 408 6190</p>
+    
+            </div>
+            <div class="contenido-PIE">
+                <h4>Edition 2021, Software de Prueba.</h4>
+                <p>Universidad Santo Tómas seccional Tunja</p>
+                <p>Ing.Luis Felipe Narváez Gómez</p>
+                <p>Version: Ejercicios de clase</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; Edition 2021, OnRuiso Arrt Desing Web | Ing.Luis Felipe Narváez Gómez | ruiso.art.science@gmail.com | Phone:(+57)320 408 6190</h2>
+    </footer>
+
+
+</body>
+</html>
